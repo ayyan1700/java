@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Age in Alert Box</title>
+</head>
+<style>
+    .box{
+        width: 100%;
+        height: 30vh;
+        text-align: center;
+        align-content: center;
+    }
+    .box1{
+        width: 100%;
+        height: 30vh;
+        text-align: center;
+        align-content: center;
+    }
+    .box2{
+        width: 100%;
+        height: 30vh;
+        text-align: center;
+        align-content: center;
+    }
+    .nbox{
+        width: 100%;
+        height: 30vh;
+        text-align: center;
+        align-content: center;
+    }
+</style>
+<body>
+
+
+     <div class="box">
+       <h2>Click the button to show your age</h2>
+        <button onclick="showAge()">Click Me</button>
+     </div>
+
+
+
+     <div class="box1">
+        <h2>Welcome to our website</h2>
+    <p id="visitMessage"></p>
+     </div>
+
+
+
+
+
+
+
+      <div class="box2">
+        <h2>Displaying birth in the Webpage</h2>
+        <div id="Display"></div>
+        <div id="Displaying"></div>
+      </div>
+
+
+
+<div class="nbox">
+      <h2>Order Summary</h2>
+      <p id="box"></p></div>
+
+
+
+    <script>  
+
+        let age = 15;  
+        function showAge() {
+            alert("Your age is: " + age);
+        }
+
+
+
+
+
+
+
+  
+        let visitCount = localStorage.getItem("visitCount");   
+        if (visitCount == null) {
+            visitCount = 0;
+        } 
+        visitCount++;
+        localStorage.setItem("visitCount", visitCount);
+        document.getElementById("visitMessage").innerHTML = "You have visited this site " + visitCount + " times.";
+
+
+
+
+
+
+        let text = "the birth is 1990";       
+        document.getElementById("Display").innerHTML = "Your birth: " + text;
+        let texting = "the birth is in this browser";       
+        document.getElementById("Displaying").innerHTML = "Your birth: " + texting;
+  
+        
+
+
+
+          
+        let visitorName = "John Doe";  
+        let productTitle = "T-shirt";  
+        let quantity = 5;  
+        document.getElementById  ("box").innerHTML =  visitorName + " ordered " + quantity + " " + productTitle + "(s) on XYZ Clothing store.";
+
+
+
+    </script>
+
+</body>
+</html>

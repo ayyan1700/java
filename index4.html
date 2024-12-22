@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Two Numbers</title>
+    <style>
+       .box1{
+            width: 100%;
+            height: 50%;
+            text-align: center;         
+        }
+        .box1>button{
+            display: block;
+            margin: 25px auto;
+          
+        }
+        .box2{
+            margin-top: 100px;
+            width: 100%;
+            height: 50%;
+            text-align: center;         
+        }
+        .box2>button{
+            display: block;
+            margin: 25px auto;
+          
+        }
+        .box3{
+            margin-top: 100px;
+            width: 100%;
+            height: 50%;
+            text-align: center;         
+        }
+        .box4{
+            margin-top: 100px;
+            width: 100%;
+            height: 50%;
+            text-align: center;         
+        }
+        .box5{
+            margin-top: 100px;
+            width: 100%;
+            height: 30vh;
+            text-align: center;         
+        }
+
+        .box6{
+           
+            width: 100%;
+            height:20vh;
+            text-align: center;         
+        }
+        .box7{
+           
+           width: 100%;
+           height: 40vh;
+           text-align: center;         
+       }
+       .box8{
+           
+           width: 100%;
+           height: 20vh;
+           text-align: center;         
+       }
+
+       .box9{
+           
+           width: 100%;
+           height: 20vh;
+           text-align: center;         
+       }
+       .box10{
+           
+           width: 100%;
+           height: 20vh;
+           text-align: center;         
+       }
+       .box11{
+           
+           width: 100%;
+           height: 20vh;
+           text-align: center;         
+       }
+       
+       .box12{
+           
+           width: 100%;
+           height: 20vh;
+           text-align: center;         
+       }
+       .box14{
+           
+           width: 100%;
+           height: 20vh;
+           text-align: center;         
+       }
+
+    </style>
+</head>
+
+
+
+
+<body>
+
+
+    <div class="box1">
+    <h1>Add Two Numbers</h1>
+    <p>Enter the first number:</p>
+    <input type="number" id="num1" /> 
+    <p>Enter the second number:</p>
+    <input type="number" id="num2" />
+    <button onclick="addNumbers()">Add Numbers</button>
+    <h2 id="resulting"></h2>
+    </div>
+
+
+
+
+<div class="box2">
+    <h2> Do the following using JS Mathematic Expressions a. Declare a variable. show in console 
+    </h2>
+</div>
+   
+
+
+<div class="box3">
+    <h1>Mathematical Expressions in JavaScript</h1>
+    <p id="result"></p> 
+</div>
+
+
+
+<div class="box4">
+    <h1>Movie Ticket Cost Calculator</h1>
+    <p id="resul"></p> 
+</div>
+
+
+
+
+
+
+
+<div class="box5">
+    <h1>Multiplication Table Generator</h1>
+    <p>Enter a number to see its multiplication table:</p>
+    <input type="number" id="number" placeholder="Enter a number" />
+    <button onclick="generateTable()">Generate Table</button>
+    <h2>Multiplication Table</h2>
+    <div id="tableResult"></div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="box6">
+        <h1>Temperature Converter</h1>
+        <p id="resu"></p> 
+    
+    </div>
+
+
+
+    <div class="box7">
+        <h1>Shopping Cart Checkout</h1>
+        <div id="receipt"></div>
+    </div>
+
+
+
+
+
+
+
+
+     <div class="box8">
+        <h2>mark obtained by student</h2>
+    <p id="res"></p>
+     </div>
+
+
+
+
+
+     <div class="box9">
+        <h1>Currency Converter: USD & SAR to PKR</h1>
+        <p id="re"></p> 
+     </div>
+
+
+
+
+
+
+     <div class="box10">
+        <h1>Arithmetic Operations on a Number</h1>
+        <p id="ra"></p> 
+     </div>
+
+
+
+
+     <div class="box11">
+        <h1>Age Calculator</h1>
+        <p id="ring"></p> 
+     </div>
+
+
+
+
+
+
+
+
+     <div class="box12">
+        <h1>Geometrizer: Circle Properties</h1>
+        <p id="circumference"></p>
+        <p id="area"></p>
+     </div>
+
+
+     <div class="box14">
+        <h1>Lifetime Supply Calculator</h1>
+        <p id="last"></p> 
+     </div>
+
+    <script>
+    
+            function addNumbers() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let sum = num1 * num2;       
+            document.getElementById("resulting").innerHTML = "The result is: " + sum;
+        }
+
+
+
+            
+        let myNumbering = 10; 
+        console.log(myNumbering);
+        
+
+
+
+        let myNumber;
+        document.getElementById("result").innerHTML = "Value after variable declaration is: " + myNumber + "<br>";
+        myNumber = 5;
+        document.getElementById("result").innerHTML += "Initial value: " + myNumber + "<br>";
+        myNumber++;
+        document.getElementById("result").innerHTML += "Value after increment is: " + myNumber + "<br>";
+        myNumber += 7;
+        document.getElementById("result").innerHTML += "Value after addition is: " + myNumber + "<br>";
+        myNumber--;
+        document.getElementById("result").innerHTML += "Value after decrement is: " + myNumber + "<br>";
+        let remainder = myNumber % 3;
+        document.getElementById("result").innerHTML += "The remainder is: " + remainder + "<br>";
+
+
+
+      
+
+
+
+          
+          let ticketPrice = 600;
+           let totalCost = ticketPrice * 5;
+         document.getElementById("resul").innerHTML = "The total cost for buying 5 movie tickets is: " + totalCost + " PKR";
+
+
+
+
+
+         function generateTable() {
+            let number = document.getElementById("number").value;
+            document.getElementById("tableResult").innerHTML = "";
+            if (number === "" || isNaN(number)) {
+                document.getElementById("tableResult").innerHTML = "Please enter a valid number.";
+                return;
+            }
+            let table = "<table border='1' style='border-collapse: collapse;'>";
+            for (let i = 1; i <= 10; i++) {
+                table += "<tr><td>" + number + " x " + i + "</td><td>" + (number * i) + "</td></tr>";
+            }
+            table += "</table>";
+            document.getElementById("tableResult").innerHTML = table;
+        }
+
+
+
+
+
+
+
+
+         
+          let celsius = 25;  
+
+
+         let fahrenheitFromCelsius = (celsius * 9/5) + 32;
+         document.getElementById("resu").innerHTML = celsius + "°C is " + fahrenheitFromCelsius + "°F.<br>";
+       let fahrenheit = 77; 
+       let celsiusFromFahrenheit = (fahrenheit - 32) * 5/9;
+       document.getElementById("resu").innerHTML += fahrenheit + "°F is " + celsiusFromFahrenheit.toFixed(2) + "°C.";
+
+
+
+         
+
+
+
+
+      let priceItem1 = 500; 
+        let priceItem2 = 300;  
+        let quantityItem1 = 2;  
+        let quantityItem2 = 3;  
+        let shippingCharges = 50;  
+        let totalCostItem1 = priceItem1 * quantityItem1;   
+        let totalCostItem2 = priceItem2 * quantityItem2; 
+        let totalCosts = totalCostItem1 + totalCostItem2 + shippingCharges; 
+        let receipt = `
+            <h2>Receipt</h2>
+            <p>Item 1: Price = ${priceItem1} PKR, Quantity = ${quantityItem1}, Total = ${totalCostItem1} PKR</p>
+            <p>Item 2: Price = ${priceItem2} PKR, Quantity = ${quantityItem2}, Total = ${totalCostItem2} PKR</p>
+            <p>Shipping Charges: ${shippingCharges} PKR</p>
+            <hr>
+            <p><strong>Total Cost: ${totalCosts} PKR</strong></p>
+        `;
+        document.getElementById("receipt").innerHTML = receipt;
+
+
+
+
+
+
+
+
+
+        let totalMarks = 500;  
+        let marksObtained = 450;   
+        let percentage = (marksObtained / totalMarks) * 100;
+        document.getElementById("res").innerHTML = 
+         "Marks Obtained: " + marksObtained + " / " + totalMarks + "<br>" +
+         "Percentage: " + percentage.toFixed(2) + "%"; 
+
+
+
+
+
+
+
+
+
+          
+        let usd = 10;  
+        let sar = 25;  
+        let totalPKR = (usd * 104.80) + (sar * 28);
+        document.getElementById("re").innerHTML = 
+        usd + " US Dollars and " + sar + " Saudi Riyals is equal to " + totalPKR.toFixed(2) + " Pakistani Rupees.";
+
+
+
+
+
+            
+         let number = 8;
+        let result = ((number + 5) * 10) / 2;
+       document.getElementById("ra").innerHTML = 
+      "The result of adding 5, multiplying by 10, and dividing by 2 is: " + result;
+
+
+
+
+
+
+
+        
+      let currentYear = 2024; 
+      let birthYear = 1998; 
+      let age1 = currentYear - birthYear; 
+      let age2 = age1 - 1;  
+      document.getElementById("ring").innerHTML = 
+       "They are either " + age2 + " or " + age1 + " years old.";
+
+
+
+
+
+
+      
+        let radius = 7; 
+        const pi = 3.142; 
+        let circumference = 2 * pi * radius;
+        let area = pi * radius * radius;
+        document.getElementById("circumference").innerHTML = "The circumference is " + circumference.toFixed(2);
+        document.getElementById("area").innerHTML = "The area is " + area.toFixed(2);
+
+
+
+
+
+
+
+
+
+
+
+
+       
+  let favoriteSnack = "chips"; 
+  let currentAge = 25;
+  let maxAge = 80;
+  let snacksPerDay = 3
+  let yearsRemaining = maxAge - currentAge; 
+  let totalDays = yearsRemaining * 365;  
+  let totalSnacks = totalDays * snacksPerDay;  
+  document.getElementById("last").innerHTML = 
+    "You will need " + totalSnacks + " " + favoriteSnack + "(s) to last you until the ripe old age of " + maxAge + ".";
+    </script>
+
+</body>
+</html>

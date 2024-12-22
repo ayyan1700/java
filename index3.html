@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Variable Declaration</title>
+    <style>
+        .box{
+            width: 100%;
+        height: 30vh;
+        text-align: center;
+        align-content: center;
+        }
+        .box1{
+            width: 100%;
+        height: 2vh;
+        text-align: center;
+        align-content: center;
+        }
+        .box6{
+            width: 100%;
+        height: 2vh;
+        text-align: center;
+        align-content: center;
+        }
+        .box2{
+            display: flex;
+            width: 100%;
+        height: 30vh;
+        gap: 20px;
+      justify-content: center;
+      align-items: center;
+      
+        }
+      
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>three variables use in one statement</h2>
+    <button onclick="variables()">check the alert box</button>
+</div>
+
+
+<div class="box1">
+<h2>5 legal and 5 illegal variables names</h2></div>
+<div class="box2">
+  <div class="first">
+    <h2>legal variable</h2>
+<ul>
+    
+    <li>firstName</li>
+    <li>age_25</li>
+    <li>_userName</li>
+    <li>totalAmount</li>
+    <li>isActive</li>
+</ul>
+  </div>
+  <div class="sec">
+    <h2>illegal variable</h2>
+    <ul>
+       
+    <li>123name</li>
+    <li>#userName</li>
+    <li>total-amount</li>
+    <li>my name</li>
+    <li>var</li>
+</ul>
+  </div>
+
+</div>
+
+
+
+
+<div class="box6">
+<h1>Rules for Naming JS Variables</h1>
+    
+<p>Variable names can only contain <span id="part1"></span>.</p>
+<p>Variables must begin with a <span id="part2"></span>.</p>
+<p>Variable names are case <span id="part3"></span>.</p>
+<p>Variable names should not be JS <span id="part4"></span>.</p></div>
+
+
+
+
+
+
+
+    <script>
+
+        let name = "John Doe", age = 30, city = "New York";
+        function variables(){
+        alert("Name: " + name + "\nAge: " + age + "\nCity: " + city);}
+
+
+
+
+
+
+        document.getElementById("part1").innerHTML = "letters, digits, underscores (_) and dollar signs ($)";
+        document.getElementById("part2").innerHTML = "letter, underscore (_), or dollar sign ($)";
+        document.getElementById("part3").innerHTML = "sensitive";
+        document.getElementById("part4").innerHTML = "keywords";
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
